@@ -83,3 +83,4 @@ allure-results/*
 
 # Target
 target/*
+src/main/java/pl.stb2trello/secrets/*
