@@ -24,6 +24,7 @@ class CreateBoardTest {
     //    test wykona się tyle razy ile jest danych w metodzie sampleBoardNameData
     @DisplayName("Create board with valid data")
     @ParameterizedTest(name = "Board name: {0}")
+//    @ParameterizedTest(name = "Board name: {0}, {1}, {2}") można dodać więcej parametrów
     // test parametryzowany, nazwa wyświetlana dla każdego przypadku, {0} w tym miejscu wyswietla sie dane z metody
     @MethodSource("sampleBoardNameData")
     // żródłem danych dla naszego testu będzie metoda sampleBoardNameData
@@ -62,6 +63,7 @@ class CreateBoardTest {
 
     private static Stream<Arguments> sampleBoardNameData() { // metoda z danymi do testów
         return Stream.of(
+//                Arguments.of("nazwaTablicy", "", ""), można dodać kilka argumentów
                 Arguments.of("nazwaTablicy"),
                 Arguments.of("NAZWATABLICY"),
                 Arguments.of("NAZWA_TABLICY"),
